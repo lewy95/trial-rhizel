@@ -10,11 +10,12 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 测试 full GC
+ * 需要在启动时，加上参数 -XX:+PrintGCDetails
  */
 public class FullGCProblem {
 
     private static class CardInfo {
-        BigDecimal price = new BigDecimal(0.0);
+        BigDecimal price = new BigDecimal("0.0");
         String name = "Lewy";
         int age = 32;
         Date birthday = new Date();
@@ -39,10 +40,7 @@ public class FullGCProblem {
     private static void modelFit() {
         List<CardInfo> taskList = getAllCardInfo();
         taskList.forEach(info -> {
-            executor.scheduleWithFixedDelay(() -> {
-                info.withdraw();
-
-            }, 2, 3, TimeUnit.SECONDS);
+            executor.scheduleWithFixedDelay(info::withdraw, 2, 3, TimeUnit.SECONDS);
         });
 
     }
