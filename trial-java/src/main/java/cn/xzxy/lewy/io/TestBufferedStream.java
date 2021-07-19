@@ -10,8 +10,8 @@ public class TestBufferedStream {
         BufferedOutputStream bos = null;
         try {
             //1.提供读入、写出的文件
-            File file = new File("trial-jvm/data/file/letter");
-            File newFile = new File("trial-jvm/data/file/letter_copy");
+            File file = new File("trial-java/data/file/letter");
+            File newFile = new File("trial-java/data/file/letter_copy");
             //2.创建相应的节点流，非文本文件只能用字节流
             FileInputStream fis = new FileInputStream(file);
             FileOutputStream fos = new FileOutputStream(newFile);
