@@ -20,6 +20,8 @@ import java.lang.management.ManagementFactory;
  * 1. 创建一个接口，命名规范为：Java类名 + MBean。如Java类为Greet，则需要创建GreetMBean接口；
  * 2. 创建Java类，使它实现刚创建的接口，命名规则为类名+MBean必须等于接口名；
  * 3. 获取MBeanServer，创建一个ObjectName来设定MBean的名称(name=MBean名)，然后将 MBean 注册到 MBeanServer。
+ *
+ * 关于查看 MBean 信息，可用使用 jconsole
  */
 public class StandardMBeanMain {
 
