@@ -2,6 +2,9 @@ package cn.xzxy.lewy.io;
 
 import java.io.*;
 
+/**
+ * 拷贝文件案例
+ */
 public class TestBufferedStream {
 
     public static void main(String[] args) {
@@ -15,12 +18,12 @@ public class TestBufferedStream {
             //2.创建相应的节点流，非文本文件只能用字节流
             FileInputStream fis = new FileInputStream(file);
             FileOutputStream fos = new FileOutputStream(newFile);
-            //3.包装节点流
+            // 3.包装节点流
             bis = new BufferedInputStream(fis);
             bos = new BufferedOutputStream(fos);
-            //4.具体的实现文件复制的操作
+            // 4.具体的实现文件复制的操作
             byte[] buf = new byte[1024];
-            int len = 0;
+            int len;
             while ((len = bis.read(buf)) != -1) {
                 bos.write(buf, 0, len);
                 bos.flush(); //刷新缓冲区，将缓冲区中的数据刷到目的地文件中
@@ -28,7 +31,7 @@ public class TestBufferedStream {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            //5.关闭流
+            // 5.关闭流
             if (bos != null) {
                 try {
                     bos.close();
