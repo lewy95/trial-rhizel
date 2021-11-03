@@ -12,10 +12,10 @@
 
     <modules>
         <module>trial-design-pattern</module>
-        <module>trial-algorithm</module>
         <module>trial-jvm</module>
         <module>trial-encrypt</module>
         <module>trial-java</module>
+        <module>trial-algorithm</module>
     </modules>
 
     <build>
