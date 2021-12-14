@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.asm;
+package cn.xzxy.lewy.bytecode.asm;
 
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
@@ -14,7 +14,7 @@ import java.io.FileOutputStream;
 public class Generator {
   public static void main(String[] args) throws Exception {
     // 读取
-    ClassReader classReader = new ClassReader("cn/xzxy/lewy/asm/Base");
+    ClassReader classReader = new ClassReader("cn/xzxy/lewy/bytecode/asm/Base");
     ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_MAXS);
     // 处理
     ClassVisitor classVisitor = new MyClassVisitor(classWriter);

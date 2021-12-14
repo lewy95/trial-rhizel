@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.asm;
+package cn.xzxy.lewy.bytecode.javassist;
 
 /**
  * 定义需要被增强的Base类：其中只包含一个process()方法，方法内输出一行“process”。

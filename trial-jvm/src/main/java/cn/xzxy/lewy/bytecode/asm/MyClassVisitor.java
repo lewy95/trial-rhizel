@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.asm;
+package cn.xzxy.lewy.bytecode.asm;
 
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
@@ -32,7 +32,7 @@ public class MyClassVisitor extends ClassVisitor implements Opcodes {
   public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
     MethodVisitor mv = cv.visitMethod(access, name, desc, signature,
         exceptions);
-    //Base类中有两个方法：无参构造以及process方法，这里不增强构造方法
+    // Base类中有两个方法：无参构造以及process方法，这里不增强构造方法
     if (!name.equals("<init>") && mv != null) {
       mv = new MyMethodVisitor(mv);
     }
@@ -59,7 +59,7 @@ public class MyClassVisitor extends ClassVisitor implements Opcodes {
     public void visitInsn(int opcode) {
       if ((opcode >= Opcodes.IRETURN && opcode <= Opcodes.RETURN)
           || opcode == Opcodes.ATHROW) {
-        //方法在返回之前，打印"end"
+        // 方法在返回之前，打印"end"
         mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
         mv.visitLdcInsn("end");
         mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
