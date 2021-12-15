@@ -1,6 +1,6 @@
 package lewy.graph.structure;
 
-import cn.xzxy.lewy.graph.structure.util.IOUtils;
+import lewy.graph.structure.util.IOUtils;
 
 /**
  * 邻接表的总体实现

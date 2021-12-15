@@ -1,8 +1,8 @@
 package cn.xzxy.lewy.jni;
 
-public class HelloJNI {
+public class HelloJNICpp {
   static {
-    System.loadLibrary("hello"); // Load native library at runtime
+    System.loadLibrary("helloCpp"); // Load native library at runtime
     // hello.dll (Windows) or libhello.so (Unixes)
   }
 
@@ -11,6 +11,6 @@ public class HelloJNI {
 
   // Test Driver
   public static void main(String[] args) {
-    new HelloJNI().sayHello();  // invoke the native method
+    new HelloJNICpp().sayHello();  // invoke the native method
   }
 }
