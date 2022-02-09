@@ -6,11 +6,11 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
- * arthas快速入门参考案例
+ * 入门案例：
  * 功能：每隔一秒生成一个随机数，再执行质因数分解，并打印出分解结果
  */
 public class MathGame {
-    private static Random random = new Random();
+    private static final Random random = new Random();
 
     public int illegalArgumentCount = 0;
 
@@ -50,7 +50,7 @@ public class MathGame {
             throw new IllegalArgumentException("number is: " + number + ", need >= 2");
         }
 
-        List<Integer> result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<>();
         int i = 2;
         while (i <= number) {
             if (number % i == 0) {
