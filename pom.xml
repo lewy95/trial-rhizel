@@ -16,6 +16,7 @@
         <module>trial-encrypt</module>
         <module>trial-java</module>
         <module>trial-algorithm</module>
+        <module>trial-netty</module>
     </modules>
 
     <build>
