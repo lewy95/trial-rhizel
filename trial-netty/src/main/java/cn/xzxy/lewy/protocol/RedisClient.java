@@ -50,7 +50,7 @@ public class RedisClient {
             });
 
             // 根据IP、端口连接Redis服务端
-            client.connect("192.168.12.129", 6379).sync();
+            client.connect("127.0.0.1", 6379).sync();
         } catch (Exception e) {
             e.printStackTrace();
         }
