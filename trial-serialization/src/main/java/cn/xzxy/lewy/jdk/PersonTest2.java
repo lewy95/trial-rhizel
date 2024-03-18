@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.serializable.jdk;
+package cn.xzxy.lewy.jdk;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;

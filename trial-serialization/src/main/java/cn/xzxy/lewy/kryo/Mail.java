@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.serializable.kryo;
+package cn.xzxy.lewy.kryo;
 
 import lombok.Data;
 

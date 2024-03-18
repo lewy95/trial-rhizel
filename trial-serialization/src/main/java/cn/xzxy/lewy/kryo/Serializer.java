@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.serializable.kryo;
+package cn.xzxy.lewy.kryo;
 
 /**
  * 序列化接口（程序调用该接口来实现obj<->byte[]之间的序列化/反序列化）

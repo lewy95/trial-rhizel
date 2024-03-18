@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.serializable.jdk;
+package cn.xzxy.lewy.jdk;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -15,14 +15,14 @@ public class PersonTest {
         person.setName("Robert");
 
         // 序列化
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("trial-java/data/serializable/person"));
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("trial-serialization/data/person"));
         oos.writeObject(person);
         oos.flush();
         oos.close();
         System.out.println("Serialize OK");
 
         // 反序列化
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("trial-java/data/serializable/person"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("trial-serialization/data/person"));
         Person person2 = (Person) ois.readObject();
         System.out.println(person2);
 

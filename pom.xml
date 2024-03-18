@@ -17,6 +17,7 @@
         <module>trial-java</module>
         <module>trial-algorithm</module>
         <module>trial-netty</module>
+        <module>trial-serialization</module>
     </modules>
 
     <build>

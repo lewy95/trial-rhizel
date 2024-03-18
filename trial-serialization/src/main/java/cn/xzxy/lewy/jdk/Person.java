@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.serializable.jdk;
+package cn.xzxy.lewy.jdk;
 
 import lombok.Data;
 
